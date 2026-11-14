@@ -91,6 +91,10 @@ sudo systemctl start jiankong-wecom.service
 journalctl -u jiankong-wecom --no-pager -e
 ```
 
+## 效果图
+
+![效果图](screenshot.png)
+
 ## 更新记录
 
 ### v1.0.0 (2026-11-15)
