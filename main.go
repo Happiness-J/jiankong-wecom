@@ -221,6 +221,10 @@ func buildReport(cfg *Config) string {
 func main() {
 	log.SetOutput(os.Stdout)
 	log.Printf("jiankong-wecom %s 启动", version)
+	if len(os.Args) > 1 && os.Args[1] == "metrics" {
+		serveMetrics()
+		return
+	}
 	cfg := loadConfig()
 	report := buildReport(cfg)
 	if err := sendWecomMarkdown(cfg.WecomWebhook, report); err != nil {
